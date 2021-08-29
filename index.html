@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>Boolzapp - Milestone 1</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class=" container mt-4 overflow-auto">
+            <div class="row d-flex h-100">
+                <!--# CONTACT-SIDEBAR -->
+                <div class="col-4 bg-contacts border-blue">
+                    <div class="row d-flex flex-column ">
+                        <!--* PROFILE -->
+                        <div class="col px-0">
+                            <section id="profile">
+                                <!--* User Menu *-->
+                                <div class="row">
+                                    <!--* User Profile *-->
+                                    <div class="col">
+                                        <div class="row d-flex justify-content-center align-items-center">
+                                            <!--* User Img *-->
+                                            <div class="col-4">
+                                                <div
+                                                    class="user-img rounded-circle d-flex justify-content-center align-items-center">
+                                                    <img src="./img/avatar_io.jpg" class="my-1 ms-3" alt="User Image">
+                                                </div>
+                                            </div>
+                                            <!--* User Name *-->
+                                            <div class="col-8">Nome Utente</div>
+                                        </div>
+                                    </div>
+                                    <!--* User Menu *-->
+                                    <div class="col d-flex justify-content-end align-items-center">
+                                        <i class="fas fa-circle-notch mx-pe c-grey fa-pe"></i> <!-- Icon Stories -->
+                                        <i class="fas fa-comment-alt mx-pe c-grey fa-pe"></i> <!-- Icon Message -->
+                                        <i class="fas fa-ellipsis-v mx-pe c-grey fa-pe"></i> <!-- Icon Dots -->
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!--* NOTIFICATIONS -->
+                        <div class="col px-0">
+                            <section id="notifications" class="py-3">
+                                <div class="row h-100">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <div class="white-circle ms-4 d-flex align-items-center">
+                                            <i class="fas fa-bell-slash bell color-azure"></i> <!-- Icon Bell-Slash -->
+                                        </div>
+                                    </div>
+                                    <div class="col-9 d-flex align-items-center">
+                                        <div class="row d-flex flex-column ">
+                                            <div class="col">
+                                                <div class="fw-bold">Ricevi notifiche di nuovi messaggi</div>
+                                                <div class="text-decoration-underline fs-pe">Attiva notifiche dekstop
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!--* SEARCH -->
+                        <!--TODO Filter Bar-->
+                        <div class="col mt-3">
+                            <section id="search">
+                                <div>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control form-control-lg fs-6"
+                                            placeholder="Cerca o inizia una nuova chat">
+                                        <i class="bi bi-search me-2"></i>
+                                        <span><i class="fas fa-search"></i></span>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!--* CONTACTS-BAR -->
+                        <div class="col">
+                            <section id="contacts-bar">
+                                <div class="row d-flex flex-column">
+                                    <div class="col h-contacts">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="user-img rounded-circle d-flex -items-center">
+                                                    <img src="./img/avatar_1.jpg" class="m-2" alt="User Image">
+                                                </div>
+                                            </div>
+                                            <div class="col-10 d-flex align-items-center">
+                                                <span>Michele</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col h-contacts">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="user-img rounded-circle d-flex -items-center">
+                                                    <img src="./img/avatar_2.jpg" class="m-2" alt="User Image">
+                                                </div>
+                                            </div>
+                                            <div class="col-10 d-flex align-items-center">
+                                                <span>Fabio</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col h-contacts">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="user-img rounded-circle d-flex -items-center">
+                                                    <img src="./img/avatar_3.jpg" class="m-2" alt="User Image">
+                                                </div>
+                                            </div>
+                                            <div class="col-10  d-flex align-items-center">
+                                                <span>Samuele</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col h-contacts">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="user-img rounded-circle d-flex -items-center">
+                                                    <img src="./img/avatar_4.jpg" class="m-2" alt="User Image">
+                                                </div>
+                                            </div>
+                                            <div class="col-10 d-flex align-items-center">
+                                                <span>Luisa</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--# SECTION CHAT -->
+                <div class="col-8 bg-chat something px-0">
+                    <section id="contact-chat" class="position-relative">
+                        <header class="position-fixed bg-white">
+                            <div class="row">
+                                <!--* Contact-Chat-Info *-->
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="user-img d-flex justify-content-center align-items-center">
+                                                <img src="./img/avatar_1.jpg" class="my-1 ms-3" alt="User Image">
+                                            </div>
+                                        </div>
+                                        <div class="col-10 d-flex align-items-center justify-content-start">
+                                            <div class="row d-flex flex-column justify-content-center">
+                                                <div class="col">
+                                                    <span class="fw-bold">Michele</span>
+                                                </div>
+                                                <div class="col">
+                                                    <span class="fs-pe">Ultimo accesso oggi alle</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--* Contact-Chat-Menu *-->
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <i class="fas fa-search mx-pe c-grey fa-pe"></i> <!-- Icon Stories -->
+                                    <i class="fas fa-paperclip mx-pe c-grey fa-pe"></i> <!-- Icon Message -->
+                                    <i class="fas fa-ellipsis-v mx-pe c-grey fa-pe"></i> <!-- Icon Dots -->
+                                </div>
+                            </div>
+                        </header>
+                    </section>
+                    <section id="chat"></section>
+                    <section id="message"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

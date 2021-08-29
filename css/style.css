@@ -1,0 +1,111 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient( to bottom, #00bfa5 10%, white 10%, grey 100%);
+    overflow-y: hidden;
+}
+
+#app .container {
+    height: 900px;
+}
+
+.border-blue {
+    border-right: 1px solid blue;
+}
+
+.c-grey {
+    color: lightgrey;
+}
+
+.fs-pe {
+    font-size: 12px;
+}
+
+.bg-contacts {
+    background-color: white;
+}
+
+/*| ************SECTION PROFILE************** */
+
+#profile {
+    height: 60px;
+}
+
+.user-img>img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/*| ************SECTION NOTIFICATION*********** */
+
+#notifications {
+    height: 8%;
+    background-color: #93dcfc;
+}
+
+.color-azure {
+    color: #93dcfc;
+}
+
+.white-circle {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-pe {
+    font-size: 20px;
+}
+
+.bell {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.mx-pe {
+    margin: 12px;
+}
+
+/*| ************SECTION SEARCH*********** */
+
+#search {
+    height: 5%;
+}
+
+/*| ************SECTION CONTACTS-BAR*********** */
+
+#contacts-bar {
+    height: 80%;
+}
+
+#contacts-bar .h-contacts {
+    min-height: 70px;
+    max-height: 80px;
+}
+
+#contacts-bar .h-contacts img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/*! *****************SECTION CHAT***************** */
+
+.bg-chat {
+    background-color: #ECE5DD;
+}
+
+.something {
+    overflow-y: scroll;
+}
+
+/*| ************SECTION CONTACT-CHAT************ */
+
+#contact-chat header {
+    height: 60px;
+    width: 880px;
+}
+
+#contact-chat img {
+    max-width: 100%;
+    border-radius: 50%;
+}
