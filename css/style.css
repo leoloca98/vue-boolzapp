@@ -1,27 +1,15 @@
+/* # _________GENERALS__________ */
+
+/* GENERALS */
+
 body {
     height: 100vh;
-    background-image: linear-gradient( to bottom, #00bfa5 10%, white 10%, grey 100%);
+    background-image: linear-gradient( to bottom, #00bfa5 15%, #f0f0f0 15%, #f0f0f0 15%);
     overflow-y: hidden;
 }
 
-#app .container {
+#app>.container {
     height: 900px;
-}
-
-.border-blue {
-    border-right: 1px solid blue;
-}
-
-.c-grey {
-    color: lightgrey;
-}
-
-.fs-pe {
-    font-size: 12px;
-}
-
-.fs-data {
-    font-size: 10px;
 }
 
 .overflow-y-scroll {
@@ -29,15 +17,39 @@ body {
     overflow-x: hidden;
 }
 
-.bg-contacts {
-    background-color: white;
+/* COLORS */
+
+.c-grey {
+    color: lightgrey;
 }
 
-.pt-chat {
+/* FONTS */
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+/* SPACING */
+
+.pt-70 {
     padding-top: 70px;
 }
 
-/*| ************SECTION PROFILE************** */
+/* ! _________CONTACTS__________ */
+
+#contacts {
+    background-color: white;
+}
+
+/* # _________PROFILE__________ */
 
 #profile {
     height: 60px;
@@ -48,7 +60,7 @@ body {
     border-radius: 50%;
 }
 
-/*| ************SECTION NOTIFICATION*********** */
+/* # _________NOTIFICATIONS__________ */
 
 #notifications {
     height: 8%;
@@ -66,10 +78,6 @@ body {
     border-radius: 50%;
 }
 
-.fa-pe {
-    font-size: 20px;
-}
-
 .bell {
     font-size: 25px;
     margin-left: 10px;
@@ -79,49 +87,51 @@ body {
     margin: 12px;
 }
 
-/*| ************SECTION SEARCH*********** */
+/* # _________SEARCH__________ */
 
 #search {
     height: 5%;
 }
 
-/*| ************SECTION CONTACTS-BAR*********** */
+/* # _________CONTACTS-SIDESBAR__________ */
 
-#contacts-bar {
+#contacts-sidebar {
     height: 80%;
 }
 
-#contacts-bar .h-contacts {
+#contacts-sidebar .h-contacts {
     min-height: 70px;
     max-height: 80px;
 }
 
-#contacts-bar .h-contacts img {
+#contacts-sidebar .h-contacts img {
     max-width: 100%;
     border-radius: 50%;
 }
 
-/*! *****************SECTION CHAT***************** */
+/* ! _________CHAT__________ */
 
-.bg-chat {
+#chat {
     background-color: #ECE5DD;
 }
 
-/*| ************SECTION CONTACT-CHAT************ */
+/* # _________PROFILE-CHAT__________ */
 
-#contact-chat header {
+#profile-chat header {
     height: 60px;
     width: 880px;
 }
 
-#contact-chat img {
+#profile-chat img {
     max-width: 100%;
     border-radius: 50%;
 }
 
-/* | ***************SECTION CHAT*************** */
+/* # _________MESSAGES__________ */
 
 .message-sent {
     background-color: #DCF8C6;
     max-width: 300px;
 }
+
+/* # _________TEXT__________ */

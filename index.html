@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <title>Boolzapp - Milestone 1</title>
+    <script src="https://kit.fontawesome.com/83bd2dbeec.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
     <div id="app" class="h-100 d-flex align-items-center justify-content-center">
-        <div class="container">
-            <div class="row d-flex h-100">
+        <div class="container rounded-3 shadow">
+            <div class="row h-100">
                 <!--# CONTACT-SIDEBAR -->
-                <div class="col-4 bg-contacts border-blue">
+                <section id="contacts" class="col-4">
                     <div class="row d-flex flex-column ">
                         <!--* PROFILE -->
                         <div class="col px-0">
@@ -42,9 +41,9 @@
                                     </div>
                                     <!--* User Menu *-->
                                     <div class="col d-flex justify-content-end align-items-center">
-                                        <i class="fas fa-circle-notch mx-pe c-grey fa-pe"></i> <!-- Icon Stories -->
-                                        <i class="fas fa-comment-alt mx-pe c-grey fa-pe"></i> <!-- Icon Message -->
-                                        <i class="fas fa-ellipsis-v mx-pe c-grey fa-pe"></i> <!-- Icon Dots -->
+                                        <i class="fas fa-circle-notch mx-pe c-grey fs-20"></i> <!-- Icon Stories -->
+                                        <i class="fas fa-comment-alt mx-pe c-grey fs-20"></i> <!-- Icon Message -->
+                                        <i class="fas fa-ellipsis-v mx-pe c-grey fs-20"></i> <!-- Icon Dots -->
                                     </div>
                                 </div>
                             </section>
@@ -55,14 +54,16 @@
                                 <div class="row h-100">
                                     <div class="col-3 d-flex align-items-center">
                                         <div class="white-circle ms-4 d-flex align-items-center">
-                                            <i class="fas fa-bell-slash bell color-azure"></i> <!-- Icon Bell-Slash -->
+                                            <i class="fas fa-bell-slash bell color-azure"></i>
+                                            <!-- Icon Bell-Slash -->
                                         </div>
                                     </div>
                                     <div class="col-9 d-flex align-items-center">
                                         <div class="row d-flex flex-column ">
                                             <div class="col">
                                                 <div class="fw-bold">Ricevi notifiche di nuovi messaggi</div>
-                                                <div class="text-decoration-underline fs-pe">Attiva notifiche dekstop
+                                                <div class="text-decoration-underline fs-12">Attiva notifiche
+                                                    dekstop
                                                 </div>
                                             </div>
                                         </div>
@@ -84,9 +85,9 @@
                                 </div>
                             </section>
                         </div>
-                        <!--* CONTACTS-BAR -->
+                        <!--* CONTACTS-SIDEBAR -->
                         <div class="col">
-                            <section id="contacts-bar">
+                            <section id="contacts-sidebar">
                                 <div class="row d-flex flex-column">
                                     <div class="col h-contacts">
                                         <div class="row">
@@ -140,10 +141,10 @@
                             </section>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!--# SECTION CHAT -->
-                <div class="col-8 bg-chat overflow-y-scroll px-0">
-                    <section id="contact-chat" class="position-relative">
+                <section id="chat" class="col-8 overflow-y-scroll px-0">
+                    <section id="profile-chat" class="position-relative">
                         <header class="position-fixed bg-white">
                             <div class="row">
                                 <!--* Contact-Chat-Info *-->
@@ -160,7 +161,7 @@
                                                     <span class="fw-bold">Michele</span>
                                                 </div>
                                                 <div class="col">
-                                                    <span class="fs-pe">Ultimo accesso oggi alle</span>
+                                                    <span class="fs-12">Ultimo accesso oggi alle</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,16 +169,16 @@
                                 </div>
                                 <!--* Contact-Chat-Menu *-->
                                 <div class="col d-flex justify-content-end align-items-center">
-                                    <i class="fas fa-search mx-pe c-grey fa-pe"></i> <!-- Icon Stories -->
-                                    <i class="fas fa-paperclip mx-pe c-grey fa-pe"></i> <!-- Icon Message -->
-                                    <i class="fas fa-ellipsis-v mx-pe c-grey fa-pe"></i> <!-- Icon Dots -->
+                                    <i class="fas fa-search mx-pe c-grey fs-20"></i> <!-- Icon Stories -->
+                                    <i class="fas fa-paperclip mx-pe c-grey fs-20"></i> <!-- Icon Message -->
+                                    <i class="fas fa-ellipsis-v mx-pe c-grey fs-20"></i> <!-- Icon Dots -->
                                 </div>
                             </div>
                         </header>
                     </section>
-                    <section id="chat">
+                    <section id="messages">
                         <!--* Messagges -->
-                        <div class="container pt-chat">
+                        <div class="container pt-70">
                             <!--* Messagge Sent -->
                             <div class="row border rounded-pill message-sent p-1">
                                 <div class="col">
@@ -187,7 +188,7 @@
                                                 <span>Messaggio</span>
                                             </div>
                                             <div class="col d-flex justify-content-end">
-                                                <span class="fs-data text-uppercase">Giorno/Ora</span>
+                                                <span class="fs-10 text-uppercase">Giorno/Ora</span>
                                             </div>
                                         </div>
                                     </div>
@@ -195,8 +196,8 @@
                             </div>
                         </div>
                     </section>
-                    <section id="message"></section>
-                </div>
+                    <section id="text"></section>
+                </section>
             </div>
         </div>
     </div>
