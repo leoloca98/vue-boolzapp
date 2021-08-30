@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class=" container mt-4 overflow-auto">
+    <div id="app" class="h-100 d-flex align-items-center justify-content-center">
+        <div class="container">
             <div class="row d-flex h-100">
                 <!--# CONTACT-SIDEBAR -->
                 <div class="col-4 bg-contacts border-blue">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <!--# SECTION CHAT -->
-                <div class="col-8 bg-chat something px-0">
+                <div class="col-8 bg-chat overflow-y-scroll px-0">
                     <section id="contact-chat" class="position-relative">
                         <header class="position-fixed bg-white">
                             <div class="row">
@@ -175,7 +175,26 @@
                             </div>
                         </header>
                     </section>
-                    <section id="chat"></section>
+                    <section id="chat">
+                        <!--* Messagges -->
+                        <div class="container pt-chat">
+                            <!--* Messagge Sent -->
+                            <div class="row border rounded-pill message-sent p-1">
+                                <div class="col">
+                                    <div>
+                                        <div class="row d-flex flex-column px-2 lh-1">
+                                            <div class="col">
+                                                <span>Messaggio</span>
+                                            </div>
+                                            <div class="col d-flex justify-content-end">
+                                                <span class="fs-data text-uppercase">Giorno/Ora</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section id="message"></section>
                 </div>
             </div>

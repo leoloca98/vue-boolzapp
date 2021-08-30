@@ -20,8 +20,21 @@ body {
     font-size: 12px;
 }
 
+.fs-data {
+    font-size: 10px;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .bg-contacts {
     background-color: white;
+}
+
+.pt-chat {
+    padding-top: 70px;
 }
 
 /*| ************SECTION PROFILE************** */
@@ -94,10 +107,6 @@ body {
     background-color: #ECE5DD;
 }
 
-.something {
-    overflow-y: scroll;
-}
-
 /*| ************SECTION CONTACT-CHAT************ */
 
 #contact-chat header {
@@ -108,4 +117,11 @@ body {
 #contact-chat img {
     max-width: 100%;
     border-radius: 50%;
+}
+
+/* | ***************SECTION CHAT*************** */
+
+.message-sent {
+    background-color: #DCF8C6;
+    max-width: 300px;
 }
