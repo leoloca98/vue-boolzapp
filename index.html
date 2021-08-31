@@ -26,9 +26,9 @@
                         <!--* User Profile *-->
                         <div class="media">
                             <figure>
-                                <img src="./img/avatar_8.jpg" alt="User Image">
+                                <img src="./img/avatar_8.jpg" :alt="user.name">
                             </figure>
-                            <div class="h6 media-text">Leonardo Locatelli</div>
+                            <div class="h6 media-text">{{ user.name }}</div>
                         </div>
 
                         <!--* User Menu *-->
@@ -135,14 +135,14 @@
                     <!-- * MESSAGES *-->
                     <section id="messages" class="overflow-auto flex-grow-1">
                         <ul class="p-0 m-0">
-                            <li class="d-flex p-3 sent">
-                                <div class="message p-1 rounded-3">
+                            <li class="d-flex p-4 sent">
+                                <div class="message py-1 px-2 rounded-3">
                                     <p class="mb-0">Messaggio</p>
                                     <time datetime="2021-08-03T09:53" class="fs-10">10/01/2020 - 09:53</time>
                                 </div>
                             </li>
-                            <li class="d-flex p-3 received">
-                                <div class="message p-1 rounded-3">
+                            <li class="d-flex p-4 received">
+                                <div class="message py-1 px-2 rounded-3">
                                     <p class="mb-0">Messaggio</p>
                                     <time datetime="2021-08-03T10:07" class="fs-10">10/01/2020 - 10:07</time>
                                 </div>
@@ -154,7 +154,7 @@
                     <section id="text" class="d-flex align-items-center justify-content-start bg-light">
                         <i class="fas fa-smile text-muted px-5 fs-30 pointer"></i>
                         <input type="text" class="h-75 w-75 ps-3" placeholder="Scrivi un messaggio">
-                        <i class="fas fa-microphone text-muted px-5 fs-30 pointer"></i>
+                        <i class=" fas fa-microphone text-muted px-5 fs-30 pointer"></i>
                     </section>
                 </section>
             </div>
