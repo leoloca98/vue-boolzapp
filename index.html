@@ -26,7 +26,7 @@
                         <!--* User Profile *-->
                         <div class="media">
                             <figure>
-                                <img src="./img/avatar_8.jpg" :alt="user.name">
+                                <img :src="`./img/avatar${user.avatar}.jpg`" :alt="user.name">
                             </figure>
                             <div class="h6 media-text">{{ user.name }}</div>
                         </div>
@@ -65,35 +65,11 @@
                     <section id=" contacts-sidebar" class="flex-grow-1 overflow-auto">
                         <ul class="m-0 p-0">
                             <li>
-                                <div class="media">
+                                <div class="media" v-for="(contact,index) in contacts">
                                     <figure>
-                                        <img src="./img/avatar_1.jpg" alt="Marco Lanci">
+                                        <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
-                                    <div class="h6 media-text">Marco Lanci</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <figure>
-                                        <img src="./img/avatar_2.jpg" alt="Fabio Zeta">
-                                    </figure>
-                                    <div class="h6 media-text">Fabio Zeta</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <figure>
-                                        <img src="./img/avatar_3.jpg" alt="Emanuele Grotta">
-                                    </figure>
-                                    <div class="h6 media-text">Emanuele Grotta</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="media">
-                                    <figure>
-                                        <img src="./img/avatar_6.jpg" alt="Giorgia Tasselli">
-                                    </figure>
-                                    <div class="h6 media-text">Giorgia Tasselli</div>
+                                    <div class="h6 media-text">{{ contact.name }}</div>
                                 </div>
                             </li>
                         </ul>
