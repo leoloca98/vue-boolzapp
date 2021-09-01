@@ -65,7 +65,7 @@
                     <section id=" contacts-sidebar" class="flex-grow-1 overflow-auto">
                         <ul class="m-0 p-0">
                             <li>
-                                <div class="media" v-for="(contact,index) in contacts">
+                                <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar">
                                     <figure>
                                         <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
