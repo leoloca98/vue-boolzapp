@@ -11,7 +11,7 @@ Milestone 1:
   nome e immagine di ogni contatto.
 - Visualizzazione dinamica dei messaggi: tramite la direttiva v-for,
   visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione.
-|- Click sul contatto mostra la conversazione del contatto cliccato.
+- Click sul contatto mostra la conversazione del contatto cliccato.
 
 *Milestone 3 
 |- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene
@@ -128,5 +128,9 @@ const app = new Vue({
             },
         ],
     },
-    methods: {},
+    methods: {
+        selectedContact(contatto) {
+            return this.user.selected = contatto.name;
+        }
+    },
 });

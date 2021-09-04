@@ -65,7 +65,8 @@
                     <section id=" contacts-sidebar" class="flex-grow-1 overflow-auto">
                         <ul class="m-0 p-0">
                             <li>
-                                <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar">
+                                <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar"
+                                    @click="selectedContact(contact)" v-model="selected">
                                     <figure>
                                         <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
