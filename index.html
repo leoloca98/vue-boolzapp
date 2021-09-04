@@ -110,17 +110,12 @@
 
                     <!-- * MESSAGES *-->
                     <section id="messages" class="overflow-auto flex-grow-1">
-                        <ul class="p-0 m-0">
-                            <li class="d-flex p-4 sent">
+                        <ul v-for="contact in contacts">
+                            <li v-if="user.selected === contact.name" v-for="text in contact.messages"
+                                class="d-flex p-4" :class="text.status">
                                 <div class="message py-1 px-2 rounded-3">
-                                    <p class="mb-0">Messaggio</p>
-                                    <time datetime="2021-08-03T09:53" class="fs-10">10/01/2020 - 09:53</time>
-                                </div>
-                            </li>
-                            <li class="d-flex p-4 received">
-                                <div class="message py-1 px-2 rounded-3">
-                                    <p class="mb-0">Messaggio</p>
-                                    <time datetime="2021-08-03T10:07" class="fs-10">10/01/2020 - 10:07</time>
+                                    <p class="mb-0">{{ text.message }}</p>
+                                    <time datetime="2021-08-03T09:53" class="fs-10">{{ text.date }}</time>
                                 </div>
                             </li>
                         </ul>
