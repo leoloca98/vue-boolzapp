@@ -154,12 +154,14 @@ const app = new Vue({
         },
         answerMessage() {
             let now = dayjs();
+            let something;
             this.newAnswer = {
                 date: now.format("DD/MM/YYYY HH:mm:ss"),
                 message: 'Ok',
                 status: 'received',
             };
-            this.contacts[i].messages.push(this.newAnswer);
+            something = this.contacts[i].messages;
+            setTimeout(() => something.push(this.newAnswer), 1000);
         },
     },
 });
