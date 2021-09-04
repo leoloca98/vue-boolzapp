@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/83bd2dbeec.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
                         <ul class="m-0 p-0">
                             <li>
                                 <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar"
-                                    @click="selectedContact(contact)" v-model="selected">
+                                    @click="selectedContact(contact)">
                                     <figure>
                                         <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
@@ -112,11 +113,11 @@
                     <!-- * MESSAGES *-->
                     <section id="messages" class="overflow-auto flex-grow-1">
                         <ul v-for="contact in contacts">
-                            <li v-if="user.selected === contact.name" v-for="text in contact.messages"
-                                class="d-flex p-4" :class="text.status">
+                            <li v-if="selected === contact.name" v-for="text in contact.messages" class="d-flex p-4"
+                                :class="text.status">
                                 <div class="message py-1 px-2 rounded-3">
                                     <p class="mb-0">{{ text.message }}</p>
-                                    <time datetime="2021-08-03T09:53" class="fs-10">{{ text.date }}</time>
+                                    <time datetime="text.date" class="fs-10">{{ text.date }}</time>
                                 </div>
                             </li>
                         </ul>
@@ -125,7 +126,8 @@
                     <!-- * TEXT *-->
                     <section id="text" class="d-flex align-items-center justify-content-start bg-light">
                         <i class="fas fa-smile text-muted px-5 fs-30 pointer"></i>
-                        <input type="text" class="h-75 w-75 ps-3" placeholder="Scrivi un messaggio">
+                        <input type="text" class="h-75 w-75 ps-3" placeholder="Scrivi un messaggio"
+                            v-model.trim="newText" v-on:keyup.enter="addMessage">
                         <i class=" fas fa-microphone text-muted px-5 fs-30 pointer"></i>
                     </section>
                 </section>

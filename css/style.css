@@ -27,6 +27,10 @@ ul, li {
     color: #93dcfc;
 }
 
+.bgSelectedContact {
+    background-color: #808080;
+}
+
 /* BORDER */
 
 .br-blue {
