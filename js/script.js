@@ -174,7 +174,7 @@ const app = new Vue({
         getLastSeen() {
             const messages = this.contacts[this.currentContact].messages;
             const receivedMessages = messages.filter((message) => message.status === 'received');
-            const lastMessage = receivedMessages[receivedMessages.length - 1];
+            const lastMessage = receivedMessages[receivedMessages.length - 1] ;
             return lastMessage.date;
         },
     },
