@@ -38,7 +38,7 @@ const app = new Vue({
     el: '#app',
     data: {
         selected: 'Marco Lanci',
-        search: '',
+        searchInput: '',
         newText: '',
         newMessage: null,
         newAnswer: null,
@@ -164,12 +164,11 @@ const app = new Vue({
             something = this.contacts[i].messages;
             setTimeout(() => something.push(this.newAnswer), 1000);
         },
-        filterContact() {
-            for (let i = 0; i < this.contacts.length; i++) {
-                if (!this.contacts[i].name.includes(this.search)) {
-                    this.contacts[i].visible = false;
-                } else this.contacts[i].visible = true;
-            }
+        filterContact(text) {
+            if (!this.serachInput === '') return true;
+            const filter = this.searchInput.toLowerCase();
+            text = text.toLowerCase();
+            return text.includes(filter);
         },
     },
 });

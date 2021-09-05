@@ -60,7 +60,7 @@
                     <section id="search" class="p-2">
                         <i class="fas fa-search text-muted"></i>
                         <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat... "
-                            v-model="search">
+                            v-model.trim="searchInput">
                     </section>
 
                     <!--* CONTACTS-SIDEBAR -->
@@ -68,7 +68,7 @@
                         <ul class="m-0 p-0">
                             <li>
                                 <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar"
-                                    @click="selectedContact(contact)">
+                                    @click="selectedContact(contact)" v-if="filterContact(contact.name)">
                                     <figure>
                                         <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
