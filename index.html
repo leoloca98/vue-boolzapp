@@ -67,8 +67,9 @@
                     <section id=" contacts-sidebar" class="flex-grow-1 overflow-auto">
                         <ul class="m-0 p-0">
                             <li>
-                                <div class="media" v-for="(contact,index) in contacts" :key="index+contact.avatar"
-                                    @click="selectedContact(contact)" v-if="filterContact(contact.name)">
+                                <div class="media" :class="contact.name === selected ? 'active':''"
+                                    v-for="(contact,index) in contacts" :key="index+contact.avatar"
+                                    @click="selectedContact(contact,index)" v-if="filterContact(contact.name)">
                                     <figure>
                                         <img :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                     </figure>
@@ -92,9 +93,9 @@
                                     <img src="./img/avatar_1.jpg" alt="Marco Lanci">
                                 </figure>
                                 <div class="h6 media-text">
-                                    <div class="fw-bold">Marco Lanci</div>
+                                    <div class="fw-bold">{{ selected }}</div>
                                     <div class="media-secondary-text fw-light">
-                                        <small>Ultimo Accesso oggi alle</small>
+                                        <small>Ultimo Accesso oggi alle {{ getLastSeen() }}</small>
                                     </div>
                                 </div>
                             </div>

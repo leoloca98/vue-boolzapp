@@ -38,11 +38,13 @@ const app = new Vue({
     el: '#app',
     data: {
         selected: 'Marco Lanci',
+        currentContact: 0,
         searchInput: '',
         newText: '',
         newMessage: null,
         newAnswer: null,
         flag: null,
+        bG: '',
 
         user: {
             name: 'Leonardo Locatelli',
@@ -135,21 +137,20 @@ const app = new Vue({
         ],
     },
     methods: {
-        selectedContact(contatto) {
+        selectedContact(contatto, index) {
             this.selected = contatto.name;
+            this.currentContact = index;
         },
         addMessage() {
-            for (i = 0; i < this.contacts.length; i++) {
-                if (this.contacts[i].name === this.selected) {
-                    let now = dayjs();
-                    this.newMessage = {
-                        date: now.format("DD/MM/YYYY HH:mm:ss"),
-                        message: this.newText,
-                        status: 'sent',
-                    };
-                    this.contacts[i].messages.push(this.newMessage);
-                    this.answerMessage();
+            if (this.contacts[this.currentContact].name === this.selected) {
+                let now = dayjs();
+                this.newMessage = {
+                    date: now.format("DD/MM/YYYY HH:mm:ss"),
+                    message: this.newText,
+                    status: 'sent',
                 };
+                this.contacts[this.currentContact].messages.push(this.newMessage);
+                this.answerMessage();
             };
             this.newText = '';
         },
@@ -161,7 +162,7 @@ const app = new Vue({
                 message: 'Ok',
                 status: 'received',
             };
-            something = this.contacts[i].messages;
+            something = this.contacts[this.currentContact].messages;
             setTimeout(() => something.push(this.newAnswer), 1000);
         },
         filterContact(text) {
@@ -169,6 +170,12 @@ const app = new Vue({
             const filter = this.searchInput.toLowerCase();
             text = text.toLowerCase();
             return text.includes(filter);
+        },
+        getLastSeen() {
+            const messages = this.contacts[this.currentContact].messages;
+            const receivedMessages = messages.filter((message) => message.status === 'received');
+            const lastMessage = receivedMessages[receivedMessages.length - 1];
+            return lastMessage.date;
         },
     },
 });
